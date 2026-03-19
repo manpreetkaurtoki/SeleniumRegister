@@ -19,11 +19,14 @@
     <version>1.0.2</version>
     <scope>compile</scope>
 </dependency>
+<<<<<<< HEAD
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
     <version>7.10.2</version>
     <scope>test</scope>
 </dependency>
+=======
+>>>>>>> 3a9adc2... Faker addition in register webelements
   </dependencies>
 </project>
