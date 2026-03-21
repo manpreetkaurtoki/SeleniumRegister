@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-19T15:11:13 EDT" name="Default suite" finished-at="2026-03-19T15:11:18 EDT" duration-ms="4310">
+  <suite started-at="2026-03-21T16:11:51 EDT" name="Default suite" finished-at="2026-03-21T16:11:59 EDT" duration-ms="7901">
     <groups>
     </groups>
-    <test started-at="2026-03-19T15:11:13 EDT" name="Default test" finished-at="2026-03-19T15:11:18 EDT" duration-ms="4310">
-      <class name="TestExamples.TestRegister">
-        <test-method signature="performClick()[pri:0, instance:TestExamples.TestRegister@67d48005]" started-at="2026-03-19T15:11:13 EDT" name="performClick" finished-at="2026-03-19T15:11:18 EDT" duration-ms="4254" status="PASS">
+    <test started-at="2026-03-21T16:11:51 EDT" name="Default test" finished-at="2026-03-21T16:11:59 EDT" duration-ms="7901">
+      <class name="Assignments.Test1">
+        <test-method signature="removeAddCheckBox()[pri:0, instance:Assignments.Test1@9f116cc]" started-at="2026-03-21T16:11:51 EDT" name="removeAddCheckBox" finished-at="2026-03-21T16:11:59 EDT" duration-ms="7855" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- performClick -->
-      </class> <!-- TestExamples.TestRegister -->
+        </test-method> <!-- removeAddCheckBox -->
+      </class> <!-- Assignments.Test1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
