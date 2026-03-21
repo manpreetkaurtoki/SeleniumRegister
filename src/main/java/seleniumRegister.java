@@ -91,12 +91,12 @@ public class seleniumRegister {
 		password.sendKeys(new Faker().internet().password());
 		password.sendKeys(Keys.TAB);
 
-		// WebElement registerClick =
-		// driver.findElement(By.xpath("//button[@type='submit']"));
-		// Thread.sleep(5000);
-		// registerClick.click();
+		 WebElement registerClick =
+		 driver.findElement(By.xpath("//button[@type='submit']"));
+		 Thread.sleep(5000);
+		 registerClick.click();
 
-		WebDriverWait regiWait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		/*WebDriverWait regiWait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		// Scroll
 		WebElement element = driver.findElement(By.xpath("//button[@type='submit']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
@@ -104,7 +104,7 @@ public class seleniumRegister {
 		// Re-locate & wait
 		WebElement clickableElement = regiWait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
-		clickableElement.click();
+		clickableElement.click();*/
 		// driver.quit();
 		// driver.close();
 	}
