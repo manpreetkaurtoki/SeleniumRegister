@@ -98,8 +98,8 @@ public class seleniumRegister {
 
 		WebDriverWait regiWait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		// Scroll
-		WebElement element = driver.findElement(By.xpath("//button[@type='submit']"));
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+	/*	WebElement element = driver.findElement(By.xpath("//button[@type='submit']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);*/
 
 		// Re-locate & wait
 		WebElement clickableElement = regiWait
