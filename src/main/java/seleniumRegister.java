@@ -1,9 +1,6 @@
 import java.text.SimpleDateFormat;
 import java.time.Duration;
-<<<<<<< HEAD
 import java.util.Date;
-=======
->>>>>>> 3a9adc2... Faker addition in register webelements
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -19,14 +16,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.github.javafaker.Faker;
 
 public class seleniumRegister {
-<<<<<<< HEAD
+
 	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-=======
-	public static void main(String[] args) {
-		WebDriver driver = new ChromeDriver();
->>>>>>> 3a9adc2... Faker addition in register webelements
+
+	
+	
+
 		driver.get("https://with-bugs.practicesoftwaretesting.com/#/");
 
 		WebElement signInElement = driver.findElement(By.xpath("//a[text()='Sign in']"));
@@ -41,7 +38,7 @@ public class seleniumRegister {
 		// your account']"));
 		// registerElement.click();
 
-<<<<<<< HEAD
+
 		WebElement firstName = driver.findElement(By.xpath("//input[@id='first_name']"));
 		// firstName.sendKeys("Manpreet");
 		firstName.sendKeys(new Faker().name().firstName());
@@ -114,65 +111,11 @@ public class seleniumRegister {
 		WebElement clickableElement = regiWait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
 		clickableElement.click();
-=======
+
 		// input[@id='first_name']
 
-		WebElement firstName = driver.findElement(By.xpath("//input[@id='first_name']"));
-		// firstName.sendKeys("Manpreet");
-		firstName.sendKeys(new Faker().name().firstName());
+		
 
-		// input[@id='last_name']
-		WebElement lastName = driver.findElement(By.xpath("//input[@id='last_name']"));
-		// lastName.sendKeys("Kaur");
-		lastName.sendKeys(new Faker().name().lastName());
-
-		// input[@id='dob']
-		WebElement dob = driver.findElement(By.xpath("//input[@id='dob']"));
-		dob.sendKeys("11-03-1999");
-
-		// input[@id='address']
-		WebElement address = driver.findElement(By.xpath("//input[@id='address']"));
-		// address.sendKeys("Amritsar");
-		address.sendKeys(new Faker().address().streetName());
-
-		// input[@id='postcode']
-		WebElement postcode = driver.findElement(By.xpath("//input[@id='postcode']"));
-		// postcode.sendKeys("147654");
-		postcode.sendKeys(new Faker().address().zipCode());
-
-		WebElement city = driver.findElement(By.xpath("//input[@id='city']"));
-		city.sendKeys(new Faker().address().cityName());
-
-		WebElement state = driver.findElement(By.xpath("//input[@id='state']"));
-		state.sendKeys(new Faker().address().state());
-
-		WebElement country = driver.findElement(By.xpath("//select[@id='country']"));
-		Select countyDropdown = new Select(country);
-		List<WebElement> options = countyDropdown.getOptions();
-		int size = options.size();
-		// Select second last option
-		countyDropdown.selectByIndex(size - 2);
-
-		// countyDropdown.selectByIndex(5);
-		// countyDropdown.selectByValue("DZ");
-		// countyDropdown.selectByVisibleText("Albania");
-
-		// input[@id='phone']
-		WebElement phone = driver.findElement(By.xpath("//input[@id='phone']"));
-		// phone.sendKeys("9876543678");
-		phone.sendKeys(new Faker().phoneNumber().cellPhone());
-
-		// input[@id='email']
-		WebElement email = driver.findElement(By.xpath("//input[@id='email']"));
-		// email.sendKeys("kaur@gmail.com");
-		email.sendKeys(new Faker().internet().emailAddress());
-
-		// input[@id='password']
-		WebElement password = driver.findElement(By.xpath("//input[@id='password']"));
-		// password.sendKeys("34256@@");
-		password.sendKeys(new Faker().internet().password());
-
->>>>>>> 3a9adc2... Faker addition in register webelements
 		// driver.quit();
 		// driver.close();
 	}
