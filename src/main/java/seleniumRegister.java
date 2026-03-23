@@ -21,8 +21,7 @@ public class seleniumRegister {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 
-	
-	
+
 
 		driver.get("https://with-bugs.practicesoftwaretesting.com/#/");
 
@@ -112,7 +111,6 @@ public class seleniumRegister {
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
 		clickableElement.click();
 
-		// input[@id='first_name']
 
 		
 

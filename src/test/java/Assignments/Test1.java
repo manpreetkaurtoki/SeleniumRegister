@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -74,6 +75,19 @@ public class Test1 {
 		// Step 7
 		WebElement compareText = driver.findElement(By.xpath("//p[@id='message']"));
 		Assert.assertEquals("It's gone!", compareText.getText());
+	}
+	@Test
+	public void dropdownPerform()
+	{
+		WebDriver driver= new ChromeDriver();
+		driver.navigate().to("https://the-internet.herokuapp.com/");
+		WebElement dropdownEle= driver.findElement(By.xpath("//a[text()='Dropdown']"));
+		dropdownEle.click();
+		
+		
+		WebElement dropSelect= driver.findElement(By.xpath("//select[@id='dropdown']"));
+		Select dropChoose= new Select(dropSelect);
+		dropChoose.selectByIndex(2);
 	}
 
 }
