@@ -42,7 +42,7 @@ public class Test1 {
 
 		// Step 6
 		WebElement compareText = driver.findElement(By.xpath("//p[@id='message']"));
-		Assert.assertEquals("It's enabled!", compareText.getText());
+		Assert.assertEquals(compareText.getText(), "It's enabled!");
 
 	}
 
@@ -74,19 +74,18 @@ public class Test1 {
 
 		// Step 7
 		WebElement compareText = driver.findElement(By.xpath("//p[@id='message']"));
-		Assert.assertEquals("It's gone!", compareText.getText());
+		Assert.assertEquals(compareText.getText(), "It's gone!");
 	}
+
 	@Test
-	public void dropdownPerform()
-	{
-		WebDriver driver= new ChromeDriver();
+	public void dropdownPerform() {
+		WebDriver driver = new ChromeDriver();
 		driver.navigate().to("https://the-internet.herokuapp.com/");
-		WebElement dropdownEle= driver.findElement(By.xpath("//a[text()='Dropdown']"));
+		WebElement dropdownEle = driver.findElement(By.xpath("//a[text()='Dropdown']"));
 		dropdownEle.click();
-		
-		
-		WebElement dropSelect= driver.findElement(By.xpath("//select[@id='dropdown']"));
-		Select dropChoose= new Select(dropSelect);
+
+		WebElement dropSelect = driver.findElement(By.xpath("//select[@id='dropdown']"));
+		Select dropChoose = new Select(dropSelect);
 		dropChoose.selectByIndex(2);
 	}
 
