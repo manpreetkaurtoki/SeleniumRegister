@@ -42,15 +42,37 @@ public class TestRegister {
 		Alert alert = driver.switchTo().alert();
 		alert.accept();
 
-		// label[contains(text(),'alert will appear after 5 seconds')]/following::button[1]
+		// label[contains(text(),'alert will appear after 5
+		// seconds')]/following::button[1]
 
 		WebElement buttonAlertClick = driver.findElement(By.xpath("//button[@onclick='myMessage()']"));
 		buttonAlertClick.click();
-		
+
 		Thread.sleep(7000);
+		alert.accept();
+
+		WebElement buttonConfirmAlertClick = driver.findElement(By.xpath("//button[@onclick='myDesk()']"));
+		buttonConfirmAlertClick.click();
+
+		// if want dismiss alert
+		// alert.dismiss();
+		// WebElement textAlert = driver.findElement(By.xpath("//div[@id='desk']"));
+		// Assert.assertEquals(textAlert.getText(), "You pressed Cancel!");
+
+		// if want accept alert
 		alert.accept();
 		
 		
-		
+		WebElement textAlert = driver.findElement(By.xpath("//div[@id='desk']"));
+		Assert.assertEquals(textAlert.getText(), "You pressed OK!");
+
+	
+		WebElement prompAlert = driver.findElement(By.xpath("//button[@onclick='myPromp()']"));
+		prompAlert.click();
+		alert.sendKeys("hhhhh");
+		System.out.println("Text sent successfully to prompt alert");
+
+		alert.accept();
+
 	}
 }
