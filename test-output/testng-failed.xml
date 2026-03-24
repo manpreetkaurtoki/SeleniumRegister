@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Assignments.Test1">
+      <class name="TestExamples.TestRegister">
         <methods>
-          <include name="enableTextField"/>
+          <include name="practiceSelenium"/>
         </methods>
-      </class> <!-- Assignments.Test1 -->
+      </class> <!-- TestExamples.TestRegister -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

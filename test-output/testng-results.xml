@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-23T09:13:30 EDT" name="Default suite" finished-at="2026-03-23T09:13:50 EDT" duration-ms="19777">
+  <suite started-at="2026-03-24T16:09:09 EDT" name="Default suite" finished-at="2026-03-24T16:09:21 EDT" duration-ms="12883">
     <groups>
     </groups>
-    <test started-at="2026-03-23T09:13:30 EDT" name="Default test" finished-at="2026-03-23T09:13:50 EDT" duration-ms="19777">
-      <class name="Assignments.Test1">
-        <test-method signature="dropdownPerform()[pri:0, instance:Assignments.Test1@67d48005]" started-at="2026-03-23T09:13:30 EDT" name="dropdownPerform" finished-at="2026-03-23T09:13:35 EDT" duration-ms="5090" status="PASS">
+    <test started-at="2026-03-24T16:09:09 EDT" name="Default test" finished-at="2026-03-24T16:09:21 EDT" duration-ms="12883">
+      <class name="TestExamples.TestRegister">
+        <test-method signature="practiceSelenium()[pri:0, instance:TestExamples.TestRegister@12468a38]" started-at="2026-03-24T16:09:09 EDT" name="practiceSelenium" finished-at="2026-03-24T16:09:21 EDT" duration-ms="12831" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dropdownPerform -->
-        <test-method signature="enableTextField()[pri:0, instance:Assignments.Test1@67d48005]" started-at="2026-03-23T09:13:35 EDT" name="enableTextField" finished-at="2026-03-23T09:13:43 EDT" duration-ms="7466" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enableTextField -->
-        <test-method signature="removeAddCheckBox()[pri:0, instance:Assignments.Test1@67d48005]" started-at="2026-03-23T09:13:43 EDT" name="removeAddCheckBox" finished-at="2026-03-23T09:13:50 EDT" duration-ms="7148" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- removeAddCheckBox -->
-      </class> <!-- Assignments.Test1 -->
+        </test-method> <!-- practiceSelenium -->
+      </class> <!-- TestExamples.TestRegister -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
