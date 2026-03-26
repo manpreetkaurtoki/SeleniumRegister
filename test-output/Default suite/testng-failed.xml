@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestExamples.TestRegister">
+      <class name="Assignments.Alerts">
         <methods>
-          <include name="practiceSelenium"/>
+          <include name="onClickJsConfirmAlert"/>
         </methods>
-      </class> <!-- TestExamples.TestRegister -->
+      </class> <!-- Assignments.Alerts -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

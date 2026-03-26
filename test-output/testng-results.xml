@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-24T17:29:13 EDT" name="Default suite" finished-at="2026-03-24T17:29:27 EDT" duration-ms="14102">
+  <suite started-at="2026-03-26T13:10:44 EDT" name="Default suite" finished-at="2026-03-26T13:10:48 EDT" duration-ms="3592">
     <groups>
     </groups>
-    <test started-at="2026-03-24T17:29:13 EDT" name="Default test" finished-at="2026-03-24T17:29:27 EDT" duration-ms="14102">
-      <class name="TestExamples.TestRegister">
-        <test-method signature="practiceSelenium()[pri:0, instance:TestExamples.TestRegister@12468a38]" started-at="2026-03-24T17:29:13 EDT" name="practiceSelenium" finished-at="2026-03-24T17:29:27 EDT" duration-ms="14043" status="PASS">
+    <test started-at="2026-03-26T13:10:44 EDT" name="Default test" finished-at="2026-03-26T13:10:48 EDT" duration-ms="3592">
+      <class name="Assignments.Alerts">
+        <test-method signature="onClickJsPromptCancelAlert()[pri:0, instance:Assignments.Alerts@59309333]" started-at="2026-03-26T13:10:44 EDT" name="onClickJsPromptCancelAlert" finished-at="2026-03-26T13:10:48 EDT" duration-ms="3553" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- practiceSelenium -->
-      </class> <!-- TestExamples.TestRegister -->
+        </test-method> <!-- onClickJsPromptCancelAlert -->
+      </class> <!-- Assignments.Alerts -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
