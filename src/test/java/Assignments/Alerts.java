@@ -84,16 +84,17 @@ public class Alerts {
 
 		// Alert alert= wait.until(ExpectedConditions.alertIsPresent());
 		Alert alert = driver.switchTo().alert();
-		String valalert= "Manpreet";
+		String valalert = "Manpreet";
 		alert.sendKeys(valalert);
 		alert.accept();
 
 		WebElement text = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@id='result']")));
 		String messageAlert = text.getText();
-	 Assert.assertTrue(messageAlert.equals("You entered: "+ valalert));
+		Assert.assertTrue(messageAlert.equals("You entered: " + valalert));
 		// Assert.assertTrue(messageAlert.equals("You clicked: Cancel"));
 
 	}
+
 	@Test
 	public void onClickJsPromptCancelAlert() {
 		WebDriver driver = new ChromeDriver();
@@ -106,13 +107,13 @@ public class Alerts {
 
 		// Alert alert= wait.until(ExpectedConditions.alertIsPresent());
 		Alert alert = driver.switchTo().alert();
-		System.out.println("Text of alert is"+ alert.getText());;
+		System.out.println("Text of alert is" + alert.getText());
 		alert.dismiss();
 
 		WebElement text = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@id='result']")));
 		String messageAlert = text.getText();
-	 Assert.assertTrue(messageAlert.equals("You entered: null"));
-		
+		Assert.assertTrue(messageAlert.equals("You entered: null"));
+
 	}
 
 }
