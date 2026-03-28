@@ -12,13 +12,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Alerts {
+public class Alerts extends Base {
 	@Test
 	public void onClickJsAlert() {
-		WebDriver driver = new ChromeDriver();
+
 		driver.navigate().to("https://the-internet.herokuapp.com/javascript_alerts");
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		WebElement jsAlertEle = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Click for JS Alert']")));
 		jsAlertEle.click();
@@ -34,10 +33,9 @@ public class Alerts {
 
 	@Test
 	public void onClickJsConfirmAlert() {
-		WebDriver driver = new ChromeDriver();
+
 		driver.navigate().to("https://the-internet.herokuapp.com/javascript_alerts");
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		WebElement jsAlertConfirmEle = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Click for JS Confirm']")));
 		jsAlertConfirmEle.click();
@@ -54,10 +52,9 @@ public class Alerts {
 
 	@Test
 	public void onClickJsConfirmDismissAlert() {
-		WebDriver driver = new ChromeDriver();
+
 		driver.navigate().to("https://the-internet.herokuapp.com/javascript_alerts");
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		WebElement jsAlertConfirmEle = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Click for JS Confirm']")));
 		jsAlertConfirmEle.click();
@@ -74,10 +71,9 @@ public class Alerts {
 
 	@Test
 	public void onClickJsPromptAlert() {
-		WebDriver driver = new ChromeDriver();
+
 		driver.navigate().to("https://the-internet.herokuapp.com/javascript_alerts");
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		WebElement jsAlertPromptEle = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Click for JS Prompt']")));
 		jsAlertPromptEle.click();
@@ -97,10 +93,9 @@ public class Alerts {
 
 	@Test
 	public void onClickJsPromptCancelAlert() {
-		WebDriver driver = new ChromeDriver();
+
 		driver.navigate().to("https://the-internet.herokuapp.com/javascript_alerts");
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		WebElement jsAlertPromptEle = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Click for JS Prompt']")));
 		jsAlertPromptEle.click();

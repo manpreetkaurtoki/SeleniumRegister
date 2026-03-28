@@ -19,7 +19,7 @@ public class ActionsExamples extends Base {
 	@Test
 	public void selectAll() {
 		driver.navigate().to("https://the-internet.herokuapp.com");
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	
 		WebElement formAuthEle = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Form Authentication']")));
 		formAuthEle.click();
