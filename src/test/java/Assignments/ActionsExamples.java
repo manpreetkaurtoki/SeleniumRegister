@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 public class ActionsExamples extends Base {
 
@@ -50,7 +51,15 @@ public class ActionsExamples extends Base {
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='column-b']/header[text()='A']")));
 		String headerText = boxBTarget.getText();
 		
-		Assert.assertEquals(headerText, "A");
+		//Assert.assertEquals(headerText, "A");
+		
+		SoftAssert softAssert = new SoftAssert();
+		softAssert.assertEquals(headerText, "A", "Header Validation failed");
+
+		System.out.println("I am trying drag and drop functionality ");
+		System.out.println("I am testing soft assertion if condition get fails ");
+		System.out.println("I am testing if it keeps executing next lines ");
+		softAssert.assertAll();
 	}
 
 }
