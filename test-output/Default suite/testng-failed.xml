@@ -6,7 +6,7 @@
       <class name="Assignments.ActionsExamples">
         <methods>
           <include name="preReq"/>
-          <include name="selectAll"/>
+          <include name="dragDrop"/>
         </methods>
       </class> <!-- Assignments.ActionsExamples -->
     </classes>
