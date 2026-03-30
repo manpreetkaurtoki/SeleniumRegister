@@ -1,13 +1,11 @@
 package Assignments;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -21,8 +19,6 @@ public class ActionsExamples extends Base {
 		WebElement formAuthEle = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Form Authentication']")));
 		formAuthEle.click();
-
-		Actions actions = new Actions(driver);
 		WebElement usernameEle = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='username']")));
 		actions.click(usernameEle).sendKeys("tomsmith").keyDown(Keys.COMMAND).sendKeys("a").keyUp(Keys.COMMAND)
@@ -36,7 +32,6 @@ public class ActionsExamples extends Base {
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Drag and Drop']")));
 		dragDropEle.click();
 
-		Actions actions = new Actions(driver);
 		WebElement boxASource = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='column-a']")));
 		WebElement boxBTarget = wait
@@ -68,7 +63,7 @@ public class ActionsExamples extends Base {
 
 		WebElement imageEle = wait.until(
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("(//img[@src='/img/avatar-blank.jpg'])[1]")));
-		Actions actions = new Actions(driver);
+		
 		actions.moveToElement(imageEle).perform();
 
 		WebElement userNameEle = wait
@@ -85,6 +80,27 @@ public class ActionsExamples extends Base {
 		System.out.println(headingUser.getText());
 
 		driver.navigate().back();
+
+	}
+
+	@Test
+	public void hoverFunctionality() {
+		driver.navigate().to("https://www.testsmith.io");
+		
+		WebElement solution = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//a[@href='https://www.testsmith.io/solutions']")));
+	
+		actions.moveToElement(solution).perform();
+
+		WebElement dropDownItem = wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//a[contains(@class,'dropdown-item') and normalize-space()='Robotisering']")));
+		actions.moveToElement(dropDownItem).click().perform();
+
+		WebElement heading = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[text()='Robotisering']")));
+		String header = heading.getText();
+
+		Assert.assertEquals(header, "Robotisering");
 
 	}
 
