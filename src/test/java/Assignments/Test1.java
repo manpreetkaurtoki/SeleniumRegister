@@ -14,6 +14,32 @@ import org.testng.annotations.Test;
 
 public class Test1 {
 
+	// locators: id, name,class name, linktext, partial link text, tagName, css,
+	// xpath
+
+	By userName = By.name("userName");
+	By password = By.name("password");
+	By registerLink = By.linkText("REGISTER");
+	By registerPartial = By.partialLinkText("Register");
+	By dropdownClass = By.className("dropdown-toggle");
+
+	@Test
+	public void locatorsPrac() {
+		WebDriver driver = new ChromeDriver();
+		driver.navigate().to("https://demo.guru99.com/test/newtours/");
+		WebElement userNameEle = driver.findElement(userName);
+		WebElement passwordEle = driver.findElement(password);
+		WebElement register = driver.findElement(registerLink);
+		WebElement destination = driver.findElement(registerPartial);
+		WebElement dropDownToggle = driver.findElement(dropdownClass);
+
+		register.click();
+//	userID.sendKeys("hello@gmail.com");
+		// destination.click();
+		// dropDownToggle.click();
+
+	}
+
 	@Test
 	public void enableTextField() {
 		WebDriver driver = new ChromeDriver();

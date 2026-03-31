@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Assignments.ActionsExamples">
+      <class name="Assignments.Test1">
         <methods>
-          <include name="preReq"/>
-          <include name="hoverClickDropdownItems"/>
+          <include name="locatorsPrac"/>
         </methods>
-      </class> <!-- Assignments.ActionsExamples -->
+      </class> <!-- Assignments.Test1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
