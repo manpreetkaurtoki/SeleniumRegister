@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-01T13:28:28 EDT" name="Default suite" finished-at="2026-04-01T13:28:53 EDT" duration-ms="24310">
+  <suite started-at="2026-04-02T15:47:24 EDT" name="Default suite" finished-at="2026-04-02T15:47:35 EDT" duration-ms="10904">
     <groups>
     </groups>
-    <test started-at="2026-04-01T13:28:28 EDT" name="Default test" finished-at="2026-04-01T13:28:53 EDT" duration-ms="24310">
-      <class name="Assignments.AmazonLocator">
-        <test-method is-config="true" signature="preReq()[pri:0, instance:Assignments.AmazonLocator@59662a0b]" started-at="2026-04-01T13:28:28 EDT" name="preReq" finished-at="2026-04-01T13:28:44 EDT" duration-ms="15479" status="PASS">
+    <test started-at="2026-04-02T15:47:24 EDT" name="Default test" finished-at="2026-04-02T15:47:35 EDT" duration-ms="10904">
+      <class name="Assignments.WindowHandleExample">
+        <test-method is-config="true" signature="preReq()[pri:0, instance:Assignments.WindowHandleExample@4efbca5a]" started-at="2026-04-02T15:47:24 EDT" name="preReq" finished-at="2026-04-02T15:47:28 EDT" duration-ms="4241" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preReq -->
-        <test-method signature="locateiPhone()[pri:0, instance:Assignments.AmazonLocator@59662a0b]" started-at="2026-04-01T13:28:44 EDT" name="locateiPhone" finished-at="2026-04-01T13:28:53 EDT" duration-ms="8782" status="PASS">
+        <test-method signature="windowHandles()[pri:0, instance:Assignments.WindowHandleExample@4efbca5a]" started-at="2026-04-02T15:47:28 EDT" name="windowHandles" finished-at="2026-04-02T15:47:35 EDT" duration-ms="6585" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- locateiPhone -->
-      </class> <!-- Assignments.AmazonLocator -->
+        </test-method> <!-- windowHandles -->
+      </class> <!-- Assignments.WindowHandleExample -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
