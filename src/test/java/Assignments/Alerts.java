@@ -1,5 +1,7 @@
 package Assignments;
 
+import java.io.IOException;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -15,9 +17,9 @@ public class Alerts extends Base {
 	By compareText = By.xpath("//p[@id='result']");
 
 	@Test
-	public void onClickJsAlert() {
+	public void onClickJsAlert() throws IOException {
 
-		driver.navigate().to("https://the-internet.herokuapp.com/javascript_alerts");
+		driver.navigate().to(BaseUtils.getConfigValue("url"));
 
 		WebElement jsAlertEle = wait.until(ExpectedConditions.elementToBeClickable(JSAlertButton));
 		jsAlertEle.click();

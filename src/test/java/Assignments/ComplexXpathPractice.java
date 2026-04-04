@@ -45,6 +45,7 @@ public class ComplexXpathPractice extends Base {
 	By table1 = By.xpath("//table[@id='courses_table']//tr[8]/td[4]");
 	By table2 = By.xpath("//table[@id='courses_table']//tr/td[text()='Advanced Selenium']");
 	By table3 = By.xpath("//table[@id='courses_table']//tr/td[text()='1517620']");
+	By tableAssign= By.xpath("//table[@id='courses_table']//tr/td[text()='Intermediate']//parent::tr/following-sibling::tr/td[text()='Advanced']");
 
 	public void locateSAP() {
 		driver.navigate().to("https://demo.guru99.com/test/selenium-xpath.html");
