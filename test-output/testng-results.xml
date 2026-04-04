@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-02T15:47:24 EDT" name="Default suite" finished-at="2026-04-02T15:47:35 EDT" duration-ms="10904">
+  <suite started-at="2026-04-04T15:46:55 EDT" name="Default suite" finished-at="2026-04-04T15:47:28 EDT" duration-ms="33457">
     <groups>
     </groups>
-    <test started-at="2026-04-02T15:47:24 EDT" name="Default test" finished-at="2026-04-02T15:47:35 EDT" duration-ms="10904">
+    <test started-at="2026-04-04T15:46:55 EDT" name="Default test" finished-at="2026-04-04T15:47:28 EDT" duration-ms="33457">
       <class name="Assignments.WindowHandleExample">
-        <test-method is-config="true" signature="preReq()[pri:0, instance:Assignments.WindowHandleExample@4efbca5a]" started-at="2026-04-02T15:47:24 EDT" name="preReq" finished-at="2026-04-02T15:47:28 EDT" duration-ms="4241" status="PASS">
+        <test-method is-config="true" signature="preReq()[pri:0, instance:Assignments.WindowHandleExample@4efbca5a]" started-at="2026-04-04T15:46:55 EDT" name="preReq" finished-at="2026-04-04T15:47:17 EDT" duration-ms="22599" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preReq -->
-        <test-method signature="windowHandles()[pri:0, instance:Assignments.WindowHandleExample@4efbca5a]" started-at="2026-04-02T15:47:28 EDT" name="windowHandles" finished-at="2026-04-02T15:47:35 EDT" duration-ms="6585" status="PASS">
+        <test-method signature="windowHandles()[pri:0, instance:Assignments.WindowHandleExample@4efbca5a]" started-at="2026-04-04T15:47:17 EDT" name="windowHandles" finished-at="2026-04-04T15:47:28 EDT" duration-ms="10770" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- windowHandles -->

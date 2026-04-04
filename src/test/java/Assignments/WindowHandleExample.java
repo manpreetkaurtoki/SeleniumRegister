@@ -1,12 +1,10 @@
 package Assignments;
 
-import java.time.Duration;
 import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -38,6 +36,7 @@ public class WindowHandleExample extends Base {
 				driver.switchTo().window(handle);
 				String message = wait.until(ExpectedConditions.elementToBeClickable(By.id("sampleHeading"))).getText();
 				Assert.assertEquals(message, "This is a sample page");
+				driver.quit();
 				/*
 				 * WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 				 * String bodyText =

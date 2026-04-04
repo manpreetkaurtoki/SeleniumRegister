@@ -38,7 +38,13 @@ public class ComplexXpathPractice extends Base {
 
 	By ex = By.xpath("//div[@class='featured-box']/h4[b[text()='Web']]");
 	By vbScript = By.xpath("//div[@class='featured-box']/ul/li[a[text()='VBScript']]");
-	By sibling = By.xpath("//div[@class='featured-box']/ul/li[a[text()='VBScript']]/parent::ul/following-sibling::h4[b[text()='Test Management']]");
+	By sibling = By.xpath(
+			"//div[@class='featured-box']/ul/li[a[text()='VBScript']]/parent::ul/following-sibling::h4[b[text()='Test Management']]");
+
+	// table xpaths 10 practice
+	By table1 = By.xpath("//table[@id='courses_table']//tr[8]/td[4]");
+	By table2 = By.xpath("//table[@id='courses_table']//tr/td[text()='Advanced Selenium']");
+	By table3 = By.xpath("//table[@id='courses_table']//tr/td[text()='1517620']");
 
 	public void locateSAP() {
 		driver.navigate().to("https://demo.guru99.com/test/selenium-xpath.html");
