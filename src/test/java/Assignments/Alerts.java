@@ -34,9 +34,9 @@ public class Alerts extends Base {
 	}
 
 	@Test
-	public void onClickJsConfirmAlert() {
+	public void onClickJsConfirmAlert() throws IOException {
 
-		driver.navigate().to("https://the-internet.herokuapp.com/javascript_alerts");
+		driver.navigate().to(BaseUtils.getConfigValue("url"));
 
 		WebElement jsAlertConfirmEle = wait.until(ExpectedConditions.elementToBeClickable(JSConfirmButton));
 		jsAlertConfirmEle.click();
@@ -52,9 +52,9 @@ public class Alerts extends Base {
 	}
 
 	@Test
-	public void onClickJsConfirmDismissAlert() {
+	public void onClickJsConfirmDismissAlert() throws IOException {
 
-		driver.navigate().to("https://the-internet.herokuapp.com/javascript_alerts");
+		driver.navigate().to(BaseUtils.getConfigValue("url"));
 
 		WebElement jsAlertConfirmEle = wait.until(ExpectedConditions.elementToBeClickable(JSConfirmButton));
 		jsAlertConfirmEle.click();
@@ -70,9 +70,9 @@ public class Alerts extends Base {
 	}
 
 	@Test
-	public void onClickJsPromptAlert() {
+	public void onClickJsPromptAlert() throws IOException {
 
-		driver.navigate().to("https://the-internet.herokuapp.com/javascript_alerts");
+		driver.navigate().to(BaseUtils.getConfigValue("url"));
 
 		WebElement jsAlertPromptEle = wait
 				.until(ExpectedConditions.elementToBeClickable(JSPromptButton));
@@ -92,9 +92,9 @@ public class Alerts extends Base {
 	}
 
 	@Test
-	public void onClickJsPromptCancelAlert() {
+	public void onClickJsPromptCancelAlert() throws IOException {
 
-		driver.navigate().to("https://the-internet.herokuapp.com/javascript_alerts");
+		driver.navigate().to(BaseUtils.getConfigValue("url"));
 
 		WebElement jsAlertPromptEle = wait
 				.until(ExpectedConditions.elementToBeClickable(JSPromptButton));

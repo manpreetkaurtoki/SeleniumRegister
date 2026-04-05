@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Assignments.Alerts">
+      <class name="Assignments.TableAssignment">
         <methods>
           <include name="preReq"/>
-          <include name="onClickJsAlert"/>
+          <include name="TestCase1"/>
         </methods>
-      </class> <!-- Assignments.Alerts -->
+      </class> <!-- Assignments.TableAssignment -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
