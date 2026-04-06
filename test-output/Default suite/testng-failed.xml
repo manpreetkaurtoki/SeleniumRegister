@@ -6,7 +6,7 @@
       <class name="Assignments.TableAssignment">
         <methods>
           <include name="preReq"/>
-          <include name="TestCase6"/>
+          <include name="TestCase8"/>
         </methods>
       </class> <!-- Assignments.TableAssignment -->
     </classes>

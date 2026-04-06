@@ -1,10 +1,14 @@
 package Assignments;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,6 +22,7 @@ public class TableAssignment extends Base {
 	By dropdownLabel = By.xpath("//span[@class='dropdown-label']");
 	By filterEnroll = By.xpath("//ul[@class='dropdown-menu']/li[text()='10,000+']");
 	By resetBtn = By.id("resetFilters");
+	By sort = By.xpath("//select[@id='sortBy']");
 
 	@Test
 	public void TestCase1() {
@@ -133,12 +138,56 @@ public class TableAssignment extends Base {
 		Assert.assertTrue(checkCheckboxBeginner.isSelected(), "Beginner is not selected");
 		Assert.assertTrue(checkCheckboxAdvanced.isSelected(), "Advanced is not selected");
 		Assert.assertTrue(checkCheckboxIntermediate.isSelected(), "Intermediate is not selected");
-		
+
 		List<WebElement> listOfData = driver.findElements(By.xpath("//table/tbody/tr"));
-		for(WebElement row: listOfData)
-		{
-			Assert.assertTrue(row.isDisplayed(),"All rows are not visible");
+		for (WebElement row : listOfData) {
+			Assert.assertTrue(row.isDisplayed(), "All rows are not visible");
 		}
 
+	}
+
+	@Test
+	public void TestCase7() {
+		driver.navigate().to("https://practicetestautomation.com/practice-test-table/?utm_source=chatgpt.com");
+		WebElement sortDropDown = driver.findElement(sort);
+		Select sortBy = new Select(sortDropDown);
+		sortBy.selectByIndex(4);
+
+		List<WebElement> listOfData = wait.until(ExpectedConditions
+				.visibilityOfAllElementsLocatedBy(By.xpath("//table/tbody/tr/td[@headers='col_enroll']")));
+		List<Integer> values = new ArrayList<>();
+		for (WebElement row : listOfData) {
+			values.add(Integer.parseInt(row.getText().replace(",", "")));
+			System.out.println(row.getText().replace(",", ""));
+		}
+
+		List<Integer> sorted = new ArrayList<>(values);
+		Collections.sort(sorted);
+		Assert.assertEquals(values, sorted, "Enroll values are not sorted in ascending numeric order.");
+	}
+
+	@Test
+	public void TestCase8() {
+		driver.navigate().to("https://practicetestautomation.com/practice-test-table/?utm_source=chatgpt.com");
+		WebElement sortDropDown = driver.findElement(sort);
+		Select sortBy = new Select(sortDropDown);
+		sortBy.selectByIndex(1);
+		
+		List<WebElement> listOfData = wait.until(ExpectedConditions
+				.visibilityOfAllElementsLocatedBy(By.xpath("//table/tbody/tr/td[@headers='col_course']")));
+		List<String> actual = new ArrayList<>();
+		for (WebElement row : listOfData) {
+			actual.add(row.getText());
+			System.out.println(row.getText());
+		}
+
+		List<String> sorted = new ArrayList<>(actual);
+		Collections.sort(sorted, String.CASE_INSENSITIVE_ORDER);
+		Assert.assertEquals(actual, sorted, "Courses are not sorted in Alphabetical order");
+		
+		sortBy.selectByIndex(2);
+		
+		
+	      
 	}
 }
