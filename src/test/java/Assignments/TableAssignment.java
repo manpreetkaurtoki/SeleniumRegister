@@ -9,12 +9,15 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TableAssignment extends Base {
+	By langAny = By.xpath("//input[@name='lang' and @value='Any']");
 	By langCheck = By.xpath("//input[@name='lang' and @value='Java']");
 	By langPython = By.xpath("//input[@type='radio' and @value='Python']");
 	By checkboxIntermediate = By.xpath("//input[@type='checkbox' and @value='Intermediate']");
 	By checkboxAdvanced = By.xpath("//input[@type='checkbox' and @value='Advanced']");
+	By checkboxBeginner = By.xpath("//input[@type='checkbox' and @value='Beginner']");
 	By dropdownLabel = By.xpath("//span[@class='dropdown-label']");
 	By filterEnroll = By.xpath("//ul[@class='dropdown-menu']/li[text()='10,000+']");
+	By resetBtn = By.id("resetFilters");
 
 	@Test
 	public void TestCase1() {
@@ -78,7 +81,7 @@ public class TableAssignment extends Base {
 				.visibilityOfAllElementsLocatedBy(By.xpath("//table/tbody/tr[not(contains(@style,'display: none'))]")));
 
 		for (WebElement element : listOfData) {
-			//it finds cell inside current row where data matches these conditions
+			// finds cell inside current row where data matches these conditions
 			String lang = element.findElement(By.xpath("./td[@data-col='language']")).getText();
 			String level = element.findElement(By.xpath("./td[@data-col='level']")).getText();
 			String enrollAmount = element.findElement(By.xpath("./td[@data-col='enrollments']")).getText();
@@ -92,5 +95,50 @@ public class TableAssignment extends Base {
 			Assert.assertTrue(value >= 10000);
 
 		}
+	}
+
+	@Test
+	public void TestCase5() {
+		driver.navigate().to("https://practicetestautomation.com/practice-test-table/?utm_source=chatgpt.com");
+		driver.findElement(langPython).click();
+		driver.findElement(checkboxBeginner).click();
+		driver.findElement(checkboxIntermediate).click();
+
+		WebElement noMatch = driver.findElement(By.xpath("//div[@id='noData']"));
+		Assert.assertTrue(noMatch.isDisplayed(), " matching courses. ");
+	}
+
+	@Test
+	public void TestCase6() {
+		driver.navigate().to("https://practicetestautomation.com/practice-test-table/?utm_source=chatgpt.com");
+		driver.findElement(langCheck).click();
+		WebElement checkReset = wait.until(ExpectedConditions.visibilityOfElementLocated(resetBtn));
+		Assert.assertTrue(checkReset.isDisplayed(), "Reset btn is not displayed");
+
+		checkReset.click();
+
+		WebElement checkAnyLang = wait.until(ExpectedConditions.visibilityOfElementLocated(langAny));
+		Assert.assertTrue(checkAnyLang.isSelected(), "Any lanaguage option is not selected");
+
+		WebElement checkCheckboxBeginner = wait.until(ExpectedConditions.visibilityOfElementLocated(checkboxBeginner));
+		WebElement checkCheckboxAdvanced = wait.until(ExpectedConditions.visibilityOfElementLocated(checkboxAdvanced));
+		WebElement checkCheckboxIntermediate = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(checkboxIntermediate));
+
+		WebElement anyOption = driver.findElement(By.xpath("//ul[@role='listbox']//li[@data-value='any']"));
+
+		String isSelected = anyOption.getAttribute("aria-selected");
+
+		Assert.assertEquals(isSelected, "true", "'Any' option is not selected");
+		Assert.assertTrue(checkCheckboxBeginner.isSelected(), "Beginner is not selected");
+		Assert.assertTrue(checkCheckboxAdvanced.isSelected(), "Advanced is not selected");
+		Assert.assertTrue(checkCheckboxIntermediate.isSelected(), "Intermediate is not selected");
+		
+		List<WebElement> listOfData = driver.findElements(By.xpath("//table/tbody/tr"));
+		for(WebElement row: listOfData)
+		{
+			Assert.assertTrue(row.isDisplayed(),"All rows are not visible");
+		}
+
 	}
 }
