@@ -9,7 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
 public class TableFilter {
 	WebDriver driver;
 	WebDriverWait wait;
@@ -35,6 +34,7 @@ public class TableFilter {
 	By filterEnroll = By.xpath("//ul[@class='dropdown-menu']/li[text()='10,000+']");
 	By resetBtn = By.id("resetFilters");
 	By sort = By.xpath("//select[@id='sortBy']");
+	By noData= By.xpath("//div[@id='noData']");
 
 	public List<String> filterLang() {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(langJava)).click();
@@ -66,5 +66,15 @@ public class TableFilter {
 		return listOfData;
 	}
 
-	
+	public WebElement noData() {
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(langPython)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(checkboxBeginner)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(checkboxIntermediate)).click();
+
+		WebElement noMatch = driver.findElement(noData);
+		return noMatch;
+
+	}
+
 }

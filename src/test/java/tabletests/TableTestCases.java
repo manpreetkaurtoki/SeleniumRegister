@@ -44,4 +44,12 @@ public class TableTestCases extends BaseTest {
 		}
 	}
 
+	@Test
+	public void TestCase5() {
+		filterObj = new TableFilter(driver, wait);
+		WebElement noMatch = filterObj.noData();
+		Assert.assertTrue(noMatch.isDisplayed(), " matching courses. ");
+
+	}
+
 }
