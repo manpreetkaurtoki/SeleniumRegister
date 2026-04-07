@@ -172,7 +172,7 @@ public class TableAssignment extends Base {
 		WebElement sortDropDown = driver.findElement(sort);
 		Select sortBy = new Select(sortDropDown);
 		sortBy.selectByIndex(1);
-		
+
 		List<WebElement> listOfData = wait.until(ExpectedConditions
 				.visibilityOfAllElementsLocatedBy(By.xpath("//table/tbody/tr/td[@headers='col_course']")));
 		List<String> actual = new ArrayList<>();
@@ -184,10 +184,15 @@ public class TableAssignment extends Base {
 		List<String> sorted = new ArrayList<>(actual);
 		Collections.sort(sorted, String.CASE_INSENSITIVE_ORDER);
 		Assert.assertEquals(actual, sorted, "Courses are not sorted in Alphabetical order");
-		
+
 		sortBy.selectByIndex(2);
-		
-		
-	      
+
+		List<WebElement> newList = wait.until(ExpectedConditions
+				.visibilityOfAllElementsLocatedBy(By.xpath("//table/tbody/tr/td[@headers='col_course']")));
+		List<String> list1Text = listOfData.stream().map(WebElement::getText).collect(Collectors.toList());
+
+		List<String> list2Text = newList.stream().map(WebElement::getText).collect(Collectors.toList());
+		Assert.assertNotEquals(list1Text, list2Text, "Both lists are equal.");
+
 	}
 }
