@@ -1,4 +1,4 @@
-package Assignments;
+package tabletests;
 
 import java.time.Duration;
 
@@ -6,16 +6,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 
-public class Base {
-
+public class BaseTest {
 	WebDriver driver;
 	WebDriverWait wait;
-	Actions actions;
+	
 
 	@BeforeMethod
 	public void preReq() {
@@ -34,9 +32,9 @@ public class Base {
 			driver = new InternetExplorerDriver();
 			break;
 		}
-
+		driver.navigate().to("https://practicetestautomation.com/practice-test-table/?utm_source=chatgpt.com");	
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		actions = new Actions(driver);
+	
 		System.out.println("entered in pre condition method");
 	}
 
@@ -44,5 +42,6 @@ public class Base {
 		driver.quit();
 		System.out.println("entered in closing browser method");
 	}
+
 
 }

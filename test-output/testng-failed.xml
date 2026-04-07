@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Assignments.TableAssignment">
+      <class name="tabletests.TableTestCases">
         <methods>
           <include name="preReq"/>
-          <include name="TestCase8"/>
+          <include name="TestCase2"/>
         </methods>
-      </class> <!-- Assignments.TableAssignment -->
+      </class> <!-- tabletests.TableTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
