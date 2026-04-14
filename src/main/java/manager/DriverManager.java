@@ -1,0 +1,51 @@
+package manager;
+
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import utils.BaseUtils;
+
+public class DriverManager {
+
+	private static WebDriver driver;
+
+	public static void initDriver() throws IOException {
+		System.out.println("I am in before method");
+		String browser = BaseUtils.getConfigValue("urlPractice");
+		switch (browser.toLowerCase()) {
+		case "chrome":
+			driver = new ChromeDriver();
+			break;
+		case "firefox":
+			driver = new FirefoxDriver();
+			break;
+		case "edge":
+			driver = new EdgeDriver();
+			break;
+		default:
+			System.out.println("Browser not supported!!");
+			break;
+
+		}
+		driver.manage().window().maximize();
+	}
+
+	public static WebDriver getDriver() {
+
+		return driver;
+
+	}
+
+	public static void quitDriver() {
+		driver.close();
+	}
+
+	public static void goToUrl(String url) {
+		driver.get(url);
+	}
+
+}
