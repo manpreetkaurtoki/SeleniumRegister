@@ -20,6 +20,7 @@ public class DriverManager {
 		switch (browser.toLowerCase()) {
 		case "chrome":
 			driver = new ChromeDriver();
+			ExtentTestManager.log.info("chrome browser has been launched");
 			break;
 		case "firefox":
 			driver = new FirefoxDriver();
@@ -33,6 +34,7 @@ public class DriverManager {
 
 		}
 		driver.manage().window().maximize();
+		ExtentTestManager.log.info("Browser has been maximised");
 	}
 
 	public static WebDriver getDriver() {
@@ -43,6 +45,7 @@ public class DriverManager {
 
 	public static void quitDriver() {
 		driver.close();
+		ExtentTestManager.log.info("Browser has been closed");
 	}
 
 	public static void goToUrl(String url) {

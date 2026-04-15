@@ -2,42 +2,42 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-15T13:38:00 EDT" name="Default suite" finished-at="2026-04-15T13:38:05 EDT" duration-ms="4728">
+  <suite started-at="2026-04-15T14:15:36 EDT" name="Default suite" finished-at="2026-04-15T14:15:43 EDT" duration-ms="7108">
     <groups>
     </groups>
-    <test started-at="2026-04-15T13:38:00 EDT" name="Default test" finished-at="2026-04-15T13:38:05 EDT" duration-ms="4728">
+    <test started-at="2026-04-15T14:15:36 EDT" name="Default test" finished-at="2026-04-15T14:15:43 EDT" duration-ms="7108">
       <class name="demoecom.CheckoutTest">
-        <test-method is-config="true" signature="initialise()[pri:0, instance:demoecom.CheckoutTest@34a3d150]" started-at="2026-04-15T13:38:00 EDT" name="initialise" finished-at="2026-04-15T13:38:00 EDT" duration-ms="417" status="PASS">
+        <test-method is-config="true" signature="initialise()[pri:0, instance:demoecom.CheckoutTest@2a4fb17b]" started-at="2026-04-15T14:15:35 EDT" name="initialise" finished-at="2026-04-15T14:15:36 EDT" duration-ms="392" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialise -->
-        <test-method is-config="true" signature="preReq(java.lang.reflect.Method)[pri:0, instance:demoecom.CheckoutTest@34a3d150]" started-at="2026-04-15T13:38:00 EDT" name="preReq" finished-at="2026-04-15T13:38:04 EDT" duration-ms="3680" status="PASS">
+        <test-method is-config="true" signature="preReq(java.lang.reflect.Method)[pri:0, instance:demoecom.CheckoutTest@2a4fb17b]" started-at="2026-04-15T14:15:36 EDT" name="preReq" finished-at="2026-04-15T14:15:42 EDT" duration-ms="6187" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void demoecom.CheckoutTest.loginTest()]]>
+                <![CDATA[public void demoecom.CheckoutTest.setFilter()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preReq -->
-        <test-method signature="loginTest()[pri:0, instance:demoecom.CheckoutTest@34a3d150]" started-at="2026-04-15T13:38:04 EDT" name="loginTest" finished-at="2026-04-15T13:38:04 EDT" duration-ms="783" status="PASS">
+        <test-method signature="setFilter()[pri:0, instance:demoecom.CheckoutTest@2a4fb17b]" started-at="2026-04-15T14:15:42 EDT" name="setFilter" finished-at="2026-04-15T14:15:43 EDT" duration-ms="874" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="endTest(org.testng.ITestResult)[pri:0, instance:demoecom.CheckoutTest@34a3d150]" started-at="2026-04-15T13:38:04 EDT" name="endTest" finished-at="2026-04-15T13:38:05 EDT" duration-ms="196" status="PASS">
+        </test-method> <!-- setFilter -->
+        <test-method is-config="true" signature="endTest(org.testng.ITestResult)[pri:0, instance:demoecom.CheckoutTest@2a4fb17b]" started-at="2026-04-15T14:15:43 EDT" name="endTest" finished-at="2026-04-15T14:15:43 EDT" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginTest status=SUCCESS method=CheckoutTest.loginTest()[pri:0, instance:demoecom.CheckoutTest@34a3d150] output={null}]]]>
+                <![CDATA[[TestResult name=setFilter status=SUCCESS method=CheckoutTest.setFilter()[pri:0, instance:demoecom.CheckoutTest@2a4fb17b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:demoecom.CheckoutTest@34a3d150]" started-at="2026-04-15T13:38:05 EDT" name="tearDown" finished-at="2026-04-15T13:38:05 EDT" duration-ms="364" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:demoecom.CheckoutTest@2a4fb17b]" started-at="2026-04-15T14:15:43 EDT" name="tearDown" finished-at="2026-04-15T14:15:43 EDT" duration-ms="463" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

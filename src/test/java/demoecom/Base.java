@@ -48,7 +48,7 @@ public class Base {
 		} else if (result.getStatus() == ITestResult.SKIP) {
 			ExtentTestManager.log.skip("Test Skipped");
 		}
-		DriverManager.quitDriver();
+		//DriverManager.quitDriver();
 		System.out.println("entered in closing browser method");
 
 	}
