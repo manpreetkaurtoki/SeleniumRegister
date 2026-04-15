@@ -7,8 +7,8 @@
         <methods>
           <include name="initialise"/>
           <include name="preReq"/>
+          <include name="setFilter"/>
           <include name="endTest"/>
-          <include name="loginTest"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- demoecom.CheckoutTest -->

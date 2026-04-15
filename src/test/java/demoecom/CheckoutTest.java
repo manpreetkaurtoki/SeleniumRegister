@@ -25,6 +25,7 @@ public class CheckoutTest extends Base {
 		signInObj.clickLogin();
 		HomePage homeObj= new HomePage();
 		homeObj.chooseFilter(2);
+		homeObj.showItems();
 	
 	}
 	

@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-15T14:15:36 EDT" name="Default suite" finished-at="2026-04-15T14:15:43 EDT" duration-ms="7108">
+  <suite started-at="2026-04-15T15:44:32 EDT" name="Default suite" finished-at="2026-04-15T15:44:39 EDT" duration-ms="6973">
     <groups>
     </groups>
-    <test started-at="2026-04-15T14:15:36 EDT" name="Default test" finished-at="2026-04-15T14:15:43 EDT" duration-ms="7108">
+    <test started-at="2026-04-15T15:44:32 EDT" name="Default test" finished-at="2026-04-15T15:44:39 EDT" duration-ms="6973">
       <class name="demoecom.CheckoutTest">
-        <test-method is-config="true" signature="initialise()[pri:0, instance:demoecom.CheckoutTest@2a4fb17b]" started-at="2026-04-15T14:15:35 EDT" name="initialise" finished-at="2026-04-15T14:15:36 EDT" duration-ms="392" status="PASS">
+        <test-method is-config="true" signature="initialise()[pri:0, instance:demoecom.CheckoutTest@2a4fb17b]" started-at="2026-04-15T15:44:32 EDT" name="initialise" finished-at="2026-04-15T15:44:32 EDT" duration-ms="375" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialise -->
-        <test-method is-config="true" signature="preReq(java.lang.reflect.Method)[pri:0, instance:demoecom.CheckoutTest@2a4fb17b]" started-at="2026-04-15T14:15:36 EDT" name="preReq" finished-at="2026-04-15T14:15:42 EDT" duration-ms="6187" status="PASS">
+        <test-method is-config="true" signature="preReq(java.lang.reflect.Method)[pri:0, instance:demoecom.CheckoutTest@2a4fb17b]" started-at="2026-04-15T15:44:32 EDT" name="preReq" finished-at="2026-04-15T15:44:37 EDT" duration-ms="4710" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,11 +22,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preReq -->
-        <test-method signature="setFilter()[pri:0, instance:demoecom.CheckoutTest@2a4fb17b]" started-at="2026-04-15T14:15:42 EDT" name="setFilter" finished-at="2026-04-15T14:15:43 EDT" duration-ms="874" status="PASS">
+        <test-method signature="setFilter()[pri:0, instance:demoecom.CheckoutTest@2a4fb17b]" started-at="2026-04-15T15:44:37 EDT" name="setFilter" finished-at="2026-04-15T15:44:39 EDT" duration-ms="2191" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setFilter -->
-        <test-method is-config="true" signature="endTest(org.testng.ITestResult)[pri:0, instance:demoecom.CheckoutTest@2a4fb17b]" started-at="2026-04-15T14:15:43 EDT" name="endTest" finished-at="2026-04-15T14:15:43 EDT" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="endTest(org.testng.ITestResult)[pri:0, instance:demoecom.CheckoutTest@2a4fb17b]" started-at="2026-04-15T15:44:39 EDT" name="endTest" finished-at="2026-04-15T15:44:39 EDT" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:demoecom.CheckoutTest@2a4fb17b]" started-at="2026-04-15T14:15:43 EDT" name="tearDown" finished-at="2026-04-15T14:15:43 EDT" duration-ms="463" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:demoecom.CheckoutTest@2a4fb17b]" started-at="2026-04-15T15:44:39 EDT" name="tearDown" finished-at="2026-04-15T15:44:40 EDT" duration-ms="653" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
