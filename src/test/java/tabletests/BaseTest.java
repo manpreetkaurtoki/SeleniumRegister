@@ -1,5 +1,6 @@
 package tabletests;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
@@ -9,12 +10,16 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+
+import manager.ExtentManager;
 
 public class BaseTest {
 	WebDriver driver;
 	WebDriverWait wait;
 	
-
+	
+	
 	@BeforeMethod
 	public void preReq() {
 		String browser = "Chrome";

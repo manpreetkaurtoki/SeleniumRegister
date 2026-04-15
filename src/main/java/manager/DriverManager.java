@@ -15,7 +15,8 @@ public class DriverManager {
 
 	public static void initDriver() throws IOException {
 		System.out.println("I am in before method");
-		String browser = BaseUtils.getConfigValue("urlPractice");
+		String browser = BaseUtils.getConfigValue("browser");
+		System.out.println("dddd"+browser);
 		switch (browser.toLowerCase()) {
 		case "chrome":
 			driver = new ChromeDriver();

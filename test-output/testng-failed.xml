@@ -3,12 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tabletests.TableTestCases">
+      <class name="demoecom.CheckoutTest">
         <methods>
+          <include name="initialise"/>
           <include name="preReq"/>
-          <include name="TestCase5"/>
+          <include name="endTest"/>
+          <include name="loginTest"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- tabletests.TableTestCases -->
+      </class> <!-- demoecom.CheckoutTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
