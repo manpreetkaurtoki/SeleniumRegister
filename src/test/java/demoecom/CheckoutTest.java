@@ -17,15 +17,17 @@ public class CheckoutTest extends Base {
 	
 	}
 	@Test
-	public void setFilter()
+	public void setFilter() throws InterruptedException
 	{
 		SigninPage signInObj = new SigninPage();
 		signInObj.enterUsername("standard_user");
 		signInObj.enterPassword("secret_sauce");
 		signInObj.clickLogin();
+		
 		HomePage homeObj= new HomePage();
 		homeObj.chooseFilter(2);
-		homeObj.showItems();
+		Thread.sleep(8000);
+		homeObj.addCheapestProductToCart();
 	
 	}
 	

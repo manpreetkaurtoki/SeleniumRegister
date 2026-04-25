@@ -3,8 +3,10 @@ package pageclasses;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
+import manager.DriverManager;
 import manager.ExtentTestManager;
 import utils.UiActionUtils;
 import utils.WaitUtils;
@@ -19,28 +21,31 @@ public class HomePage {
 		UiActionUtils.selectByIndex(WaitUtils.visibilityOfElementLocated(dropdownFilter), index);
 	}
 
-	public void showItems() {
+	/*
+	 * public void showItems() { List<WebElement> products =
+	 * UiActionUtils.getList(productList); for (int i = 0; i < products.size(); i++)
+	 * { WebElement product = products.get(i); try {
+	 * 
+	 * String title = product.findElement(price).getText().toLowerCase();
+	 * System.out.println(title);
+	 * 
+	 * if (title.equalsIgnoreCase("$7.99")) {
+	 * 
+	 * if (product.findElement(addToCartBtn).isDisplayed()) {
+	 * UiActionUtils.click(addToCartBtn, "Product cart"); }
+	 * System.out.println("hel"); break; }
+	 * 
+	 * } catch (Exception e) { System.out.println("Skipping item at index: " + i); }
+	 * } }
+	 */
+
+	public void addCheapestProductToCart() {
 		List<WebElement> products = UiActionUtils.getList(productList);
-		for (int i = 0; i < products.size(); i++) {
-			WebElement product = products.get(i);
-			try {
-
-				String title = product.findElement(price).getText().toLowerCase();
-				System.out.println(title);
-
-				if (title.equalsIgnoreCase("$7.99")) {
-
-					if (product.findElement(addToCartBtn).isDisplayed()) {
-						UiActionUtils.click(addToCartBtn, "Product cart");
-					}
-					System.out.println("hel");
-					break;
-				}
-
-			} catch (Exception e) {
-				System.out.println("Skipping item at index: " + i);
-			}
-		}
+		WaitUtils.elementToBeClickable(addToCartBtn);
+		products.get(0).findElement(addToCartBtn).click();
+		// ((JavascriptExecutor)
+		// DriverManager.getDriver()).executeScript("arguments[0].click();",
+		// addToCartBtn);
 	}
 
 }
