@@ -15,18 +15,29 @@ public class SampleTestScript {
 	WebDriverWait wait;
 	By to = By.xpath("//input[@id = 'destinput']");
 	By from = By.xpath("//input[@id = 'srcinput']");
+	By datefield = By.xpath("//div[@role='combobox']");
 
 	@Test
 	public void selectDate() {
 		driver = new ChromeDriver();
 		driver.get("https://www.redbus.in");
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(to));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(from));
+		// wait.until(ExpectedConditions.visibilityOfElementLocated(from)).sendKeys("Bangalore");
+		// wait.until(ExpectedConditions.visibilityOfElementLocated(to)).sendKeys("Delhi");
 
-		driver.findElement(from).sendKeys("Bangalore");
+		wait.until(ExpectedConditions.elementToBeClickable(datefield)).click();
+		while (true) {
+			String displayedMonth = driver.findElement(By.className("monthYearHolidayWrap___6ee5fb")).getText();
+			System.out.println(displayedMonth);
 
-		driver.findElement(from).sendKeys("Delhi");
-	
+			if (displayedMonth.equals("May 2026")) {
+				break;
+			} else {
+			driver.findElement(By.xpath("//i[@role='button' and @tabindex='0']")).click();
+			}
+		}
+
+		// Select day
+		driver.findElement(By.xpath("//span[text()='30']")).click();
 	}
 }
