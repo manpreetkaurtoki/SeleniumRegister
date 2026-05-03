@@ -1,0 +1,459 @@
+{
+  "info": {
+    "_postman_id": "334e8646-2cab-4242-b0ae-6d8929633d0a",
+    "name": "ReportEase",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "16465430"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"name\": \"Sam\",\n\"email\": \"sample@example.com\",\n\"password\": \"SecurePass@123\",\n\"role\": \"resident\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BaseUrl}}/api/register/",
+          "host": [
+            "{{BaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "register",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "let response = pm.response.json();",
+              "",
+              "// adjust key based on your API response",
+              "pm.collectionVariables.set(\"AuthToken\", response.token);",
+              "console.log(response.token);",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"email\": \"admin@example.com\",\n\"password\": \"SecurePass@123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BaseUrl}}/api/login/",
+          "host": [
+            "{{BaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "login",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SubmitNewIssue",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{AuthToken}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"title\": \"Broken Street Light\",\n\"category\": \"Street Lighting\",\n\"description\": \"Street light is broken\",\n\"location\": \"123 Main Street\",\n\"latitude\": 43.6629,\n\"longitude\": -79.3957,\n\"images\": []\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BaseUrl}}/api/report/",
+          "host": [
+            "{{BaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "report",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetUserIssues",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "  Bearer {{AuthToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{BaseUrl}}/api/issues/user/",
+          "host": [
+            "{{BaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "issues",
+            "user",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UpdateIssueStatus",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer{{AuthToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{BaseUrl}}/api/issues/69f68e9b88347c9a5a37319f",
+          "host": [
+            "{{BaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "issues",
+            "69f68e9b88347c9a5a37319f"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetAll_Issues",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer{{AuthToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{BaseUrl}}/api/admin/all-issues/",
+          "host": [
+            "{{BaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "admin",
+            "all-issues",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetAllClerks",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{AuthToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{BaseUrl}}/api/admin/clerks/",
+          "host": [
+            "{{BaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "admin",
+            "clerks",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "AssignIssue",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer{{AuthToken}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"issueId\": \"507f1f77bcf86cd799439012\",\n\"clerkId\": \"507f1f77bcf86cd799439013\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BaseUrl}}//api/issues/assign",
+          "host": [
+            "{{BaseUrl}}"
+          ],
+          "path": [
+            "",
+            "api",
+            "issues",
+            "assign"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetAssignedIssues",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer{{AuthToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{BaseUrl}}/api/admin/all-issues",
+          "host": [
+            "{{BaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "admin",
+            "all-issues"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetNotifications",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{AuthToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{BaseUrl}}/api/notifications/index/",
+          "host": [
+            "{{BaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "notifications",
+            "index",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "MarkNotifcation",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{AuthToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{BaseUrl}}/api/notifications/mark-read",
+          "host": [
+            "{{BaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "notifications",
+            "mark-read"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ForgotPassword",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"john@example.com\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BaseUrl}}/api/forgot-password/",
+          "host": [
+            "{{BaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "forgot-password",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ResetPassword",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"token\": \"reset_token\",\n\"password\": \"NewSecurePass@456\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BaseUrl}}//api/reset-password/",
+          "host": [
+            "{{BaseUrl}}"
+          ],
+          "path": [
+            "",
+            "api",
+            "reset-password",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetIssueDetail",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer{{AuthToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{BaseUrl}}//api/issues/507f1f77bcf86cd799439012",
+          "host": [
+            "{{BaseUrl}}"
+          ],
+          "path": [
+            "",
+            "api",
+            "issues",
+            "507f1f77bcf86cd799439012"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "AuthToken",
+      "value": ""
+    },
+    {
+      "key": "BaseUrl",
+      "value": ""
+    }
+  ]
+}
